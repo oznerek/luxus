@@ -2,6 +2,7 @@
   "name": "luxus",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://oznerek.github.io/luxus",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "jquery": "^3.4.1",
@@ -15,9 +16,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "sass": "node-sass src/sass/main.scss public/style.css -w",
     "dev": "concurrently --kill-others \"npm run start\" \"npm run sass\""  },
-  "eslintConfig": {
+    "eslintConfig": {
     "extends": "react-app"
   },
   "browserslist": {
