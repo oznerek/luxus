@@ -1,5 +1,14 @@
 .footer {
     width: 100%;
-    background-color: blue; 
     grid-column: 1/19;
+    padding: 3rem 7rem 5rem 7rem;
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid lightblue;
+    margin-bottom: 2rem;
+
+}
+.lexus {
+    margin-top: 5rem;
+    font-size: 50%;
+    text-align: center;
 }

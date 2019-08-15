@@ -1,0 +1,34 @@
+.testDrive {
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 3rem;
+
+    &__header {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: .2rem;
+
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: 1px solid lightgray;
+        text-align: start;
+        padding: 1rem 3rem 1rem 3rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__icon {
+        display: inline-block;
+            width: 2rem;
+            height: 1px;
+            background-color: black;
+        
+    }
+} 

@@ -11,7 +11,7 @@ export default class CarCards extends React.Component {
                 </div>
                 <div className="carCard__headerSmall"> {car.smallHeader}</div>
                 <div className="carCard__headerSmall"> Juz od {car.leasingPrice} zl netto/misiac  w leasingu smartplan</div>
-                <img className='carCard__picture'src={car.picture} alt ='picture name' />
+                <img className='carCard__picture'src={car.picture} alt ={car.name} />
                 <div className="carCard__headerEngine">{car.engine} </div>
 
             </div>

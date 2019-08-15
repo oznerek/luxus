@@ -264,5 +264,67 @@ body {
 
 .footer {
   width: 100%;
-  background-color: blue;
-  grid-column: 1/19; }
+  grid-column: 1/19;
+  padding: 3rem 7rem 5rem 7rem;
+  border-top: 1px solid whitesmoke;
+  border-bottom: 1px solid lightblue;
+  margin-bottom: 2rem; }
+
+.lexus {
+  margin-top: 5rem;
+  font-size: 50%;
+  text-align: center; }
+
+.footerList {
+  border-top: 1px solid whitesmoke;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between; }
+
+.listFooter__header {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 80%;
+  padding-bottom: 1rem; }
+
+.listFooter__list {
+  list-style: none;
+  font-size: 80%;
+  font-weight: 100;
+  cursor: pointer; }
+  .listFooter__list-item {
+    padding: .5rem 0 .5rem 0; }
+    .listFooter__list-item:hover {
+      border-bottom: 1px solid lightgray; }
+
+.socialMedia {
+  display: flex;
+  width: 10rem;
+  justify-content: space-between; }
+
+.testDrive {
+  width: 23rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 3rem; }
+  .testDrive__header {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .2rem; }
+  .testDrive__btn {
+    background-color: transparent;
+    border: 1px solid lightgray;
+    text-align: start;
+    padding: 1rem 3rem 1rem 3rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .testDrive__icon {
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background-color: black; }
