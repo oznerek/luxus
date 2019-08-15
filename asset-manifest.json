@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/luxus/static/js/main.f28c1b16.chunk.js",
-    "main.js.map": "/luxus/static/js/main.f28c1b16.chunk.js.map",
+    "main.js": "/luxus/static/js/main.7f8494e3.chunk.js",
+    "main.js.map": "/luxus/static/js/main.7f8494e3.chunk.js.map",
     "runtime~main.js": "/luxus/static/js/runtime~main.537069ab.js",
     "runtime~main.js.map": "/luxus/static/js/runtime~main.537069ab.js.map",
     "static/js/2.1a0b98c6.chunk.js": "/luxus/static/js/2.1a0b98c6.chunk.js",
     "static/js/2.1a0b98c6.chunk.js.map": "/luxus/static/js/2.1a0b98c6.chunk.js.map",
     "index.html": "/luxus/index.html",
-    "precache-manifest.491e2e613ef02dfdfc11947ccee38f73.js": "/luxus/precache-manifest.491e2e613ef02dfdfc11947ccee38f73.js",
+    "precache-manifest.9417ccfddffc2d8143fcf01540790737.js": "/luxus/precache-manifest.9417ccfddffc2d8143fcf01540790737.js",
     "service-worker.js": "/luxus/service-worker.js"
   }
 }
