@@ -1,0 +1,72 @@
+.blackNavigation {
+  position: fixed;
+  right: -15.5rem;
+  height: -webkit-fill-available;
+  width: 20rem;
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+  grid-column: 19/20;
+  grid-row: 1/5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 10;
+  @media only screen and (max-width: $tablet) {
+    height: 4rem;
+    grid-column: 1/19;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.blackList {
+  @media only screen and (max-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  &-item {
+    background-color: black;
+    width: 100%;
+    height: 6rem;
+    padding: 1rem;
+    word-wrap: inherit;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+    @media only screen and (max-width: $tablet) {
+        height: 4rem;
+      justify-content: center;
+      border-right: 1px solid white;
+      border-bottom: 0;
+    }
+    &:first-child {
+      border-top: 1px solid white;
+      @media only screen and (max-width: $tablet) {
+          border-top: 0;
+      }
+    }
+    transition: 0.5s;
+    &:hover {
+      position: relative;
+      right: 15rem;
+      @media only screen and (max-width: $tablet) {
+        right: 0; 
+      }
+    }
+  }
+  &-icon {
+    font-size: 130%;
+  }
+  &-text {
+    padding-left: 1.5rem;
+    font-size: 70%;
+    @media only screen and (max-width: $tablet) {
+      display: none;
+    }
+  }
+}

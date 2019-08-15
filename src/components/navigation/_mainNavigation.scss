@@ -1,0 +1,92 @@
+.mainNavigation {
+    position: sticky;
+    background-color: white;
+    top: 0rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 7rem 0 7rem;
+    grid-column: 1/19;
+    grid-row: 2/3;
+    border-top: 1px solid ghostwhite;
+    border-bottom: 1px solid ghostwhite;
+    z-index: 10;
+    @media only screen and (max-width: $tablet-land) {
+        padding: 0 5rem 0 5rem;
+    }
+    @media only screen and (max-width: $phone) {
+    padding: 0 3rem 0 3rem;
+    }
+}
+
+.mainNavLogo{
+    display: grid;
+    width:20rem;
+    height: 100%;
+    background-image: url("img/lexus-logo.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    grid-auto-columns: 2/6;
+}
+
+.mainList {
+    list-style-type: none;
+    display: flex;
+    cursor: pointer;
+    :hover {
+        border-bottom:1px solid whitesmoke; 
+    }
+
+    @media only screen and (max-width: $tablet-land) {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        justify-content: center;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        display:none;
+    }
+    &-name{
+        font-weight: 100;
+        margin: 0 1rem 0 1rem;
+        text-align: center;
+
+        @media only screen and (max-width: $tablet-land) {
+        width: auto;}
+    }
+    &__active {
+        border-bottom: 1px solid currentColor;
+
+    }
+}
+
+.showMenu {
+    display: flex;
+
+}
+.mainNavUser{
+    display: flex;
+    justify-content: space-between;
+    width: 7rem;
+    cursor: pointer;
+    @media only screen and (max-width: $tablet-land) {
+    width: 10rem;
+    }
+    &__icon {
+        width: 2rem;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &-mobile {
+            display: none;
+            z-index: 11;
+            @media only screen and (max-width: $tablet-land) {
+                display: block;
+            }
+        }
+    }
+}
