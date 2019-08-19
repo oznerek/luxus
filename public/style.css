@@ -33,6 +33,14 @@ body {
     .grid {
       grid-template-columns: repeat(18, 1fr); } }
 
+.pageBuilding {
+  grid-column: 1/19;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 400%;
+  color: chartreuse; }
+
 .navigation {
   grid-column: 1/20;
   grid-row: 1/5; }
@@ -140,6 +148,8 @@ body {
   list-style-type: none;
   display: flex;
   cursor: pointer; }
+  .mainList a {
+    text-decoration: none; }
   .mainList :hover {
     border-bottom: 1px solid whitesmoke; }
   @media only screen and (max-width: 56.25rem) {
@@ -161,7 +171,9 @@ body {
       .mainList-name {
         width: auto; } }
   .mainList__active {
-    border-bottom: 1px solid currentColor; }
+    border-bottom: 1px solid currentColor;
+    font-weight: 400;
+    color: #343434; }
 
 .showMenu {
   display: flex; }
@@ -280,27 +292,81 @@ body {
   padding-top: 3rem;
   display: flex;
   justify-content: space-between; }
+  .footerList__container {
+    width: 75%;
+    display: flex;
+    justify-content: space-between; }
+    @media only screen and (max-width: 56.25rem) {
+      .footerList__container {
+        width: 100%; } }
+    @media only screen and (max-width: 48rem) {
+      .footerList__container {
+        flex-direction: column; } }
+  @media only screen and (max-width: 56.25rem) {
+    .footerList {
+      flex-direction: column; } }
+  @media only screen and (max-width: 30rem) {
+    .footerList {
+      flex-direction: column-reverse; } }
 
 .listFooter__header {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 80%;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .listFooter__header-icon {
+    display: none;
+    color: grey; }
+    @media only screen and (max-width: 48rem) {
+      .listFooter__header-icon {
+        display: block; } }
+  @media only screen and (max-width: 48rem) {
+    .listFooter__header {
+      padding-top: 1rem;
+      width: 100%;
+      border-bottom: 1px solid whitesmoke;
+      cursor: pointer; } }
 
 .listFooter__list {
   list-style: none;
   font-size: 80%;
   font-weight: 100;
   cursor: pointer; }
+  @media only screen and (max-width: 48rem) {
+    .listFooter__list {
+      display: none; } }
   .listFooter__list-item {
-    padding: .5rem 0 .5rem 0; }
+    padding: 0.5rem 0 0.5rem 0; }
     .listFooter__list-item:hover {
       border-bottom: 1px solid lightgray; }
+
+.listFooter .showList {
+  display: block; }
 
 .socialMedia {
   display: flex;
   width: 10rem;
-  justify-content: space-between; }
+  justify-content: space-between;
+  cursor: pointer; }
+  @media only screen and (max-width: 56.25rem) {
+    .socialMedia {
+      padding-top: 5rem; } }
+  @media only screen and (max-width: 30rem) {
+    .socialMedia {
+      padding: 0;
+      align-self: center;
+      padding-bottom: 5rem; } }
+
+@media only screen and (max-width: 48rem) {
+  .discoverLexus .contactList .myLexus {
+    width: 100%; } }
+
+@media only screen and (max-width: 30rem) {
+  .discoverLexus .contactList .myLexus {
+    font-size: 80%; } }
 
 .testDrive {
   width: 23rem;
@@ -328,3 +394,137 @@ body {
     width: 2rem;
     height: 1px;
     background-color: black; }
+
+.offer {
+  width: 100%;
+  grid-column: 1/19;
+  height: 100%; }
+
+.specialOffer {
+  padding: 2rem 0 2rem 0;
+  grid-column: 1/20;
+  display: grid;
+  min-height: 80vh;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: 5rem auto 5rem; }
+
+.offerInformation {
+  grid-column: 3/9;
+  grid-row: 2/3;
+  background-color: white;
+  z-index: 1;
+  padding: 5rem 5rem 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-self: center; }
+  @media only screen and (max-width: 56.25rem) {
+    .offerInformation {
+      grid-column: 2/18;
+      grid-row: 3/4;
+      align-self: flex-start;
+      padding: 10% 15%; } }
+  .offerInformation h4 {
+    text-transform: uppercase;
+    padding-bottom: 1rem; }
+  .offerInformation h2 {
+    text-transform: uppercase;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 2rem 0;
+    letter-spacing: .5rem; }
+  .offerInformation p {
+    font-size: 80%;
+    font-weight: 100;
+    padding-top: 1rem; }
+    .offerInformation p :last-child {
+      padding: 0; }
+
+.offerPicture {
+  height: 100%;
+  grid-column: 7/18;
+  grid-row: 1/4;
+  background-image: url("./img/offer/background.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 56.25rem) {
+    .offerPicture {
+      grid-column: 1/19; } }
+
+.standardOffer {
+  width: 100%;
+  height: 100%; }
+
+.offerButton {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5rem; }
+
+.btn {
+  background-color: transparent;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between; }
+  .btn__span {
+    background-color: white; }
+  .btn__price {
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .btn__plus {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    font-size: 250%;
+    font-weight: 100;
+    color: white;
+    line-height: 2.5rem; }
+
+.offerPhoto {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+  @media only screen and (max-width: 56.25rem) {
+    .offerPhoto {
+      flex-direction: column; } }
+  .offerPhoto .carBackground {
+    width: 33.333%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 56.25rem) {
+      .offerPhoto .carBackground {
+        width: 100%;
+        height: 40vh;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2rem 0 2rem; } }
+    .offerPhoto .carBackground__RX {
+      background-image: url("/img/offer/offer1.jpg"); }
+    .offerPhoto .carBackground__UX {
+      background-image: url("/img/offer/offer2.jpg"); }
+    .offerPhoto .carBackground__NX {
+      background-image: url("/img/offer/offer3.jpg"); }
+    .offerPhoto .carBackground:hover {
+      width: 40%; }
+      @media only screen and (max-width: 56.25rem) {
+        .offerPhoto .carBackground:hover {
+          width: 100%; } }
+
+.carText {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media only screen and (max-width: 56.25rem) {
+    .carText {
+      align-items: flex-start; } }
+
+.carName,
+.carPrice {
+  color: white; }

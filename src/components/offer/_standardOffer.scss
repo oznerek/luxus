@@ -1,0 +1,91 @@
+.standardOffer {
+  width: 100%;
+  height: 100%;
+}
+
+.offerButton {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5rem;
+}
+.btn {
+  background-color: transparent;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  &__span {
+    background-color: white;
+  }
+  &__price {
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__plus {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    font-size: 250%;
+    font-weight: 100;
+    color: white;
+    line-height: 2.5rem;
+  }
+}
+
+.offerPhoto {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  @media only screen and (max-width: $tablet-land) {
+    flex-direction: column;
+  }
+
+  .carBackground {
+    width: 33.333%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: $tablet-land) {
+      width: 100%;
+      height: 40vh;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2rem 0 2rem;
+    }
+
+    &__RX {
+      background-image: url("/img/offer/offer1.jpg");
+    }
+    &__UX {
+      background-image: url("/img/offer/offer2.jpg");
+    }
+    &__NX {
+      background-image: url("/img/offer/offer3.jpg");
+    }
+    &:hover {
+      width: 40%;
+      @media only screen and (max-width: $tablet-land) {
+        width: 100%;
+      }
+    }
+  }
+}
+.carText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media only screen and (max-width: $tablet-land) {
+    align-items: flex-start;
+}
+}
+.carName,
+.carPrice {
+  color: white;
+}
