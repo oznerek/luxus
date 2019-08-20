@@ -1,8 +1,11 @@
 import React from 'react';
+import MainDiscover from './discover';
 
 const Discover = () => {
     return (
-        <div className='pageBuilding'> Coming Soon </div>
+        <div className='discover'> 
+            <MainDiscover />
+         </div>
     )
 }
 
