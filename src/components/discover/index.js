@@ -3,9 +3,9 @@ import MainDiscover from './discover';
 
 const Discover = () => {
     return (
-        <div className='discover'> 
+        <section className='discover'> 
             <MainDiscover />
-         </div>
+         </section>
     )
 }
 

@@ -1,58 +1,74 @@
-.specialOffer {
-    // height: 100%;
-    padding: 2rem 0 2rem 0;
-    grid-column: 1/20;
-    display: grid;
-    min-height: 80vh;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: 5rem auto 5rem;
+.infoContainer {
+  padding: 2rem 0 2rem 0;
+  grid-column: 1/20;
+  display: grid;
+  min-height: 80vh;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: 5rem auto 5rem;
+  .testDrive__btn{
+    margin-top: 2rem;
+  }
 }
 
-.offerInformation {
-    grid-column: 3/9;
-    grid-row: 2/3;
-    background-color: white;
-    z-index: 1;
-    padding: 5rem 5rem 5rem 0;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    @media only screen and (max-width: $tablet-land) {
-        grid-column: 2/18;
-        grid-row: 3/4;
-        align-self: flex-start;
-        padding: 10% 15%;
-        
+.infoText {
+  grid-column: 3/9;
+  grid-row: 2/3;
+  background-color: white;
+  z-index: 1;
+  padding: 5rem 5rem 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  @media only screen and (max-width: $tablet-land) {
+    grid-column: 2/18;
+    grid-row: 3/4;
+    // position: relative;
+    // top: -3rem;
+    align-self: flex-start;
+    padding: 10% 15%;
+    border: 1px solid whitesmoke;
+  }
+  h4 {
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+  }
+  h2 {
+    text-transform: uppercase;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 2rem 0;
+    letter-spacing: 0.5rem;
+  }
+  p {
+    font-size: 80%;
+    font-weight: 100;
+    padding-top: 1rem;
+    :last-child {
+      padding: 0;
     }
-    h4 {
-        text-transform: uppercase;
-        padding-bottom: 1rem;
-    }
-    h2 {
-        text-transform: uppercase;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
-        padding: 2rem 0;
-        letter-spacing: .5rem;
-    }
-    p{
-        font-size: 80%;
-        font-weight: 100;
-        padding-top: 1rem;
-        :last-child{
-            padding: 0;
-        }
-    }
+  }
 }
-.offerPicture {
-    height: 100%;
-    grid-column: 7/18;
-    grid-row: 1/4;
+
+.infoPicture {
+  height: 100%;
+  grid-column: 7/18;
+  grid-row: 1/4;
+
+  &__specialOffer {
     background-image: url("./img/offer/background.jpg");
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
-    @media only screen and (max-width: $tablet-land) {
-        grid-column: 1/19;
-    }
+  }
+  &__ownershipLexus {
+    background-image: url("./img/ownership/background.jpg");
+    background-position: right;
+    background-size: 140%;
+    background-repeat: no-repeat;
+    animation: pictureZoom 30s infinite;
+    box-sizing: border-box;
+  }
+  @media only screen and (max-width: $tablet-land) {
+    grid-column: 1/19;
+  }
 }

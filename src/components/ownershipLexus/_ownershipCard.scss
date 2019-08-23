@@ -1,0 +1,83 @@
+.cardsContainer {
+    padding: 2rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    @media only screen and (max-width: $tablet-land) {
+        padding: 30rem 2rem 2rem 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (max-width: $phone) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.lexusCard{
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+}
+.cardText{
+    background-color: white;
+    position: relative;
+    width: 80%;
+    align-self: center;
+    top: -3rem;
+    padding: 2rem;
+    z-index: 1;
+    h4 {
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+      }
+      h2 {
+        text-transform: uppercase;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        padding: 2rem 0;
+        letter-spacing: 2px;
+        font-size: 80%;
+      }
+      p {
+        font-size: 80%;
+        font-weight: 100;
+        padding-top: 1rem;
+        text-align: justify;
+        line-height: 3rem;
+        :last-child {
+          padding: 0;
+        }
+    }
+}
+.cardPicture{
+    width: 100%;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.cardList {
+    list-style: none;
+    font-size: 60%;
+    text-transform: uppercase;
+    padding-top: 3rem;
+    font-weight: 600;
+    line-height: 3rem;
+
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        &:hover  .testDrive__icon{
+            animation: buttonsLine 1s infinite;       
+     }
+
+        span{
+            margin-left: 2rem;
+        }
+    }
+}

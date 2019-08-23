@@ -47,6 +47,22 @@ body {
   100% {
     background-image: linear-gradient(white, white); } }
 
+@keyframes buttonsLine {
+  0% {
+    width: 0rem; }
+  50% {
+    width: 3rem; }
+  100% {
+    width: 0rem; } }
+
+@keyframes pictureZoom {
+  0% {
+    background-size: 140%; }
+  50% {
+    background-size: 150%; }
+  100% {
+    background-size: 140%; } }
+
 .navigation {
   grid-column: 1/20;
   grid-row: 1/5; }
@@ -164,6 +180,7 @@ body {
       width: 100%;
       height: 100vh;
       top: 0;
+      left: 0;
       justify-content: center;
       background-color: white;
       flex-direction: column;
@@ -394,27 +411,32 @@ body {
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    cursor: pointer; }
+    .testDrive__btn:hover .testDrive__icon {
+      animation: buttonsLine 1s infinite; }
   .testDrive__icon {
     display: inline-block;
-    width: 2rem;
+    width: 3rem;
     height: 1px;
     background-color: black; }
 
-.offer {
+.offer, .ownership {
   width: 100%;
   grid-column: 1/19;
   height: 100%; }
 
-.specialOffer {
+.infoContainer {
   padding: 2rem 0 2rem 0;
   grid-column: 1/20;
   display: grid;
   min-height: 80vh;
   grid-template-columns: repeat(18, 1fr);
   grid-template-rows: 5rem auto 5rem; }
+  .infoContainer .testDrive__btn {
+    margin-top: 2rem; }
 
-.offerInformation {
+.infoText {
   grid-column: 3/9;
   grid-row: 2/3;
   background-color: white;
@@ -424,47 +446,65 @@ body {
   flex-direction: column;
   align-self: center; }
   @media only screen and (max-width: 56.25rem) {
-    .offerInformation {
+    .infoText {
       grid-column: 2/18;
       grid-row: 3/4;
       align-self: flex-start;
-      padding: 10% 15%; } }
-  .offerInformation h4 {
+      padding: 10% 15%;
+      border: 1px solid whitesmoke; } }
+  .infoText h4 {
     text-transform: uppercase;
     padding-bottom: 1rem; }
-  .offerInformation h2 {
+  .infoText h2 {
     text-transform: uppercase;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     padding: 2rem 0;
-    letter-spacing: .5rem; }
-  .offerInformation p {
+    letter-spacing: 0.5rem; }
+  .infoText p {
     font-size: 80%;
     font-weight: 100;
     padding-top: 1rem; }
-    .offerInformation p :last-child {
+    .infoText p :last-child {
       padding: 0; }
 
-.offerPicture {
+.infoPicture {
   height: 100%;
   grid-column: 7/18;
-  grid-row: 1/4;
-  background-image: url("./img/offer/background.jpg");
-  background-position: right;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  grid-row: 1/4; }
+  .infoPicture__specialOffer {
+    background-image: url("./img/offer/background.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .infoPicture__ownershipLexus {
+    background-image: url("./img/ownership/background.jpg");
+    background-position: right;
+    background-size: 140%;
+    background-repeat: no-repeat;
+    animation: pictureZoom 30s infinite;
+    box-sizing: border-box; }
   @media only screen and (max-width: 56.25rem) {
-    .offerPicture {
+    .infoPicture {
       grid-column: 1/19; } }
 
 .standardOffer {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
+  @media only screen and (max-width: 56.25rem) {
+    .standardOffer {
+      padding-top: 30rem; } }
+  @media only screen and (max-width: 30rem) {
+    .standardOffer {
+      padding-top: 35rem; } }
 
 .offerButton {
   display: flex;
   justify-content: space-evenly;
   padding: 5rem; }
+  @media only screen and (max-width: 56.25rem) {
+    .offerButton {
+      flex-direction: column;
+      align-items: center; } }
 
 .btn {
   background-color: transparent;
@@ -474,10 +514,14 @@ body {
   .btn__span {
     background-color: white; }
   .btn__price {
+    width: 25rem;
     background-color: black;
     color: white;
     font-weight: 400;
     text-transform: uppercase; }
+    @media only screen and (max-width: 56.25rem) {
+      .btn__price {
+        margin: 0.5rem 0; } }
   .btn__plus {
     width: 3rem;
     height: 3rem;
@@ -579,3 +623,74 @@ body {
         display: inline-flex;
         background-color: white;
         margin-right: 1rem; }
+
+.cardsContainer {
+  padding: 2rem;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr); }
+  @media only screen and (max-width: 56.25rem) {
+    .cardsContainer {
+      padding: 30rem 2rem 2rem 2rem;
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 30rem) {
+    .cardsContainer {
+      grid-template-columns: 1fr; } }
+
+.lexusCard {
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end; }
+
+.cardText {
+  background-color: white;
+  position: relative;
+  width: 80%;
+  align-self: center;
+  top: -3rem;
+  padding: 2rem;
+  z-index: 1; }
+  .cardText h4 {
+    text-transform: uppercase;
+    padding-bottom: 1rem; }
+  .cardText h2 {
+    text-transform: uppercase;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 2rem 0;
+    letter-spacing: 2px;
+    font-size: 80%; }
+  .cardText p {
+    font-size: 80%;
+    font-weight: 100;
+    padding-top: 1rem;
+    text-align: justify;
+    line-height: 3rem; }
+    .cardText p :last-child {
+      padding: 0; }
+
+.cardPicture {
+  width: 100%; }
+  .cardPicture:hover {
+    transform: scale(1.05); }
+
+.cardList {
+  list-style: none;
+  font-size: 60%;
+  text-transform: uppercase;
+  padding-top: 3rem;
+  font-weight: 600;
+  line-height: 3rem; }
+  .cardList__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0; }
+    .cardList__item:hover .testDrive__icon {
+      animation: buttonsLine 1s infinite; }
+    .cardList__item span {
+      margin-left: 2rem; }

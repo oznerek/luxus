@@ -1,26 +1,39 @@
 .standardOffer {
   width: 100%;
-  height: 100%;
+  @media only screen and (max-width: $tablet-land) {
+    padding-top: 30rem;
+  }
+  @media only screen and (max-width: $phone) {
+    padding-top: 35rem;
+  }
 }
-
 .offerButton {
   display: flex;
   justify-content: space-evenly;
   padding: 5rem;
+  @media only screen and (max-width: $tablet-land) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .btn {
   background-color: transparent;
   border: 1px solid white;
   display: flex;
   justify-content: space-between;
+
   &__span {
     background-color: white;
   }
   &__price {
+    width: 25rem;
     background-color: black;
     color: white;
     font-weight: 400;
     text-transform: uppercase;
+    @media only screen and (max-width: $tablet-land) {
+      margin: 0.5rem 0;
+    }
   }
 
   &__plus {
@@ -55,9 +68,9 @@
     @media only screen and (max-width: $tablet-land) {
       width: 100%;
       height: 40vh;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 2rem 0 2rem;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 2rem 0 2rem;
     }
 
     &__RX {
@@ -83,7 +96,7 @@
   align-items: center;
   @media only screen and (max-width: $tablet-land) {
     align-items: flex-start;
-}
+  }
 }
 .carName,
 .carPrice {

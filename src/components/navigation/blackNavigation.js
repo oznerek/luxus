@@ -3,7 +3,7 @@ import React from "react";
 export default class BlackNavigation extends React.Component {
   render() {
     return (
-      <div className="blackNavigation">
+      <nav className="blackNavigation">
         <ul className="blackList">
           <li className="blackList-item">
             <div className="blackList-icon">
@@ -45,7 +45,7 @@ export default class BlackNavigation extends React.Component {
             Finansowanie</div>
           </li>
         </ul>
-      </div>
+      </nav>
     );
   }
 }

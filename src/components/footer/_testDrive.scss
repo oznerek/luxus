@@ -23,10 +23,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
+        &:hover  .testDrive__icon{
+            animation: buttonsLine 1s infinite;       
+     }
     }
     &__icon {
         display: inline-block;
-            width: 2rem;
+            width: 3rem;
             height: 1px;
             background-color: black;
         

@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 import Offer from "./components/offer";
 import UsedCars from "./components/usedCars";
 import Discover from "./components/discover";
-import OwershipLexus from "./components/owershipLexus";
+import OwershipLexus from "./components/ownershipLexus";
 
 function App() {
   return (

@@ -9,7 +9,7 @@ export default class MainNavigation extends React.Component {
 
   render() {
     return (
-      <div className="mainNavigation">
+      <nav className="mainNavigation">
         <div className="mainNavLogo" />
 
         <ul className="mainList">
@@ -45,7 +45,7 @@ export default class MainNavigation extends React.Component {
             />
           </div>
         </div>
-      </div>
+      </nav>
     );
   }
 }

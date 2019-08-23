@@ -6,11 +6,11 @@ import SmallTopNav from './smallTopNav';
 export default class Navigation extends React.Component {
     render() {
         return (
-            <nav className='navigation grid'>
+            <section className='navigation grid'>
                 <MainNavigation />
                 <BlackNavigation />
                 <SmallTopNav />
-            </nav> 
+            </section> 
         )
     }
 }
